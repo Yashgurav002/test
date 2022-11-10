@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        *{
+            margin: 10px;
+            color: blue;
+        }
+       
+    </style>
+    </head>
+    <body>
+        <h1>This is muldiv</h1>
+        <form>
+            1st Number:<input type="text" id="first-number" /><br>
+            2nd Number:<input type="text" id="second-number"/><br>
+            <input type="button" onClick="multiplyBy()" value="multiply"/><br>
+            <input type="button" onClick="divideBy()" value="divide"/><br>
+        </form>
+        <p>Result is :<br>
+        <span id="result"></span></p>
+
+        <script>
+            function multiplyBy()
+            {
+                num1=document.getElementById("first-number").value;
+                num2=document.getElementById("second-number").value;
+                document.getElementById("result").innerHTML=num1*num2;
+            }
+            function divideBy()
+            {
+                num1=document.getElementById("first-number").value;
+                num2=document.getElementById("second-number").value;
+                document.getElementById("result").innerHTML=num1/num2;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="hours"></span>
+    <span id="min"></span>
+    <span id="sec"></span>
+
+    <script>
+        setInterval(changetime,1000)
+        function changetime(){
+            const d=new Date();
+            const sec=d.getSeconds();
+            const min=d.getMinutes();
+            const hour=d.getHours();
+            
+            document.getElementById("hours").innerHTML=hour +"";
+            document.getElementById("min").innerHTML=min +"";
+            document.getElementById("sec").innerHTML=sec +"";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SUDENTS MARKS</h1>
+    <form id="newform">
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="roll">Enter your Roll No</label>
+        <input type="number" name="roll" id="roll"><br>
+        <label for="phy">Enter your phy marks</label>
+        <input type="number" name="phy" id="phy"><br>
+        <label for="chem">Enter your chem maeks</label>
+        <input type="number" name="chem" id="chem"><br>
+        <label for="math">Enter your math marks</label>
+        <input type="number" name="math" id="math"><br>
+        <input type="button" value="submit" onclick="func()">
+    </form>
+        <p id="avg">a</p>
+        <p id="total">t</p>
+        <p id="grade">g</p>
+    <script>
+        function func(){
+            x=parseInt(document.getElementById("phy").value);
+            y=parseInt(document.getElementById("chem").value);
+            z=parseInt(document.getElementById("math").value);
+            avg=(x+y+z)/3;
+            document.getElementById("avg").innerHTML="Avg marks :"+avg;
+            document.getElementById("total").innerHTML="total marks :"+(x+y+z);
+            if(x<=40||y<=40||z<=40){
+                document.getElementById("grade").innerHTML="Grade fail";
+                return;
+            }
+            if(avg>80){
+                document.getElementById("grade").innerHTML="A";
+            }
+            if(avg>60 && avg<=80){
+                document.getElementById("grade").innerHTML="B";
+            }
+            if(avg>40 && avg<=60){
+                document.getElementById("grade").innerHTML="C";
+            }
+        }
+    </script>
+</body>
+</html>

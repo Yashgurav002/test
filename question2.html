@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="newform">
+        First number:<input type="text" id="firstnum"><br>
+        Second number:<input type="text" id ="secnum">
+        <br>
+        <input type="button" value="Multiply" onclick="mul()">
+        <input type="button" value="Divide" onclick="div()">
+        </form>
+        <span id="result"></span>
+
+        <script>
+            function mul(){
+                x=document.getElementById("firstnum").value;
+                y=document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML=x*y;
+            }
+            function div(){
+                x=document.getElementById("firstnum").value;
+                y=document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML=x/y;
+            }
+        </script>
+</body>
+</html>
